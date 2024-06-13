@@ -17,7 +17,7 @@ const VideoItemImage = ({id, title, img, difficult, locked }) => {
 
   return (
     <div className='relative mt-3' onClick={handleClick}>
-      <p className={`absolute bg-${difficult} font-bold px-4 py-2 pt-1`}>
+      <p className={`absolute bg-Intermediate font-bold px-4 py-2 pt-1`}>
         {difficult}
       </p>
       <img 
