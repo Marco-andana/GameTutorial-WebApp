@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import ForumItem from './ForumItem';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import { FaRegPlusSquare } from "react-icons/fa";
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
@@ -54,5 +55,12 @@ const ForumList = ({ talks, upVote, downVote, neutralizeVote }) => {
     </div>
   );
 }
+
+ForumList.propTypes = {
+  talks: PropTypes.array,
+  upVote: PropTypes.func,
+  downVote: PropTypes.func,
+  neutralizeVote: PropTypes.func,
+};
 
 export default ForumList;

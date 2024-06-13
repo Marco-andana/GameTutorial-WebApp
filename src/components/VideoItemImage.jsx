@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const VideoItemImage = ({id, title, img, difficult, locked }) => {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -32,6 +33,14 @@ const VideoItemImage = ({id, title, img, difficult, locked }) => {
       )}
     </div>
   );
+}
+
+VideoItemImage.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  img: PropTypes.string,
+  difficult: PropTypes.string,
+  locked: PropTypes.bool,
 }
 
 export default VideoItemImage;

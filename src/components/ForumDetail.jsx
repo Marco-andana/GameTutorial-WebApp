@@ -57,3 +57,18 @@ export default function ForumDetail({
     </section>
   );
 }
+
+ForumDetail.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  owner: PropTypes.object,
+  category: PropTypes.string,
+  createdAt: PropTypes.number,
+  upVotesBy: PropTypes.array,
+  downVotesBy: PropTypes.array,
+  upVoteThreadDetail: PropTypes.func,
+  downVoteThreadDetail: PropTypes.func,
+  neutralizeVoteThreadDetail: PropTypes.func,
+  authUser: PropTypes.object,
+};

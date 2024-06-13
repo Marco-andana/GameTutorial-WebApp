@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaRegArrowAltCircleLeft } from "react-icons/fa";
+import PropTypes from 'prop-types';
 
 const GameDetailInfo = ({ image, title, desc, webLink, download }) => {
   return (
@@ -44,6 +45,14 @@ const GameDetailInfo = ({ image, title, desc, webLink, download }) => {
         </a>
     </div>
   )
+}
+
+GameDetailInfo.propTypes = {
+  image: PropTypes.string,
+  title: PropTypes.string,
+  desc: PropTypes.string,
+  webLink: PropTypes.string,
+  download: PropTypes.string,
 }
 
 export default GameDetailInfo

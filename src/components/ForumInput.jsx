@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import useInput from '../hooks/useInput';
+import PropTypes from 'prop-types';
 
 const ForumInput = ({ addTalk }) => {
     const [title, onTitleChange] = useInput('');
@@ -49,5 +50,9 @@ const ForumInput = ({ addTalk }) => {
     </form>
     );
 }
+
+ForumInput.propTypes = {
+    addTalk: PropTypes.func,
+};
 
 export default ForumInput;

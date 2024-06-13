@@ -1,4 +1,5 @@
 import React from 'react'
+import propTypes from 'prop-types';
 
 const AutoPlayVideo = ({trailer}) => {
   return (
@@ -11,6 +12,10 @@ const AutoPlayVideo = ({trailer}) => {
       />
     </div>
   )
+}
+
+AutoPlayVideo.propTypes = {
+  trailer: propTypes.string
 }
 
 export default AutoPlayVideo

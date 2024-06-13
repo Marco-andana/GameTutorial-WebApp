@@ -56,12 +56,8 @@ function Sidebar({ authUser, onSignOut }) {
 }
 
 Sidebar.propTypes = {
-    authUser: PropTypes.shape({
-        email: PropTypes.string,
-        photo: PropTypes.string,
-        name: PropTypes.string
-    }),
-    signOut: PropTypes.func.isRequired
-};
+    authUser: PropTypes.object,
+    onSignOut: PropTypes.func,
+}
 
 export default Sidebar;

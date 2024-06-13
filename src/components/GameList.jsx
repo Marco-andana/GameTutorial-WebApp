@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GameItem from './GameItem';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
 import { motion } from 'framer-motion';
+import PropTypes from 'prop-types';
 
 
 const GameList = ({ games }) => {
@@ -47,5 +48,9 @@ const GameList = ({ games }) => {
     </>
   );
 };
+
+GameList.propTypes = {
+  games: PropTypes.array,
+  }
 
 export default GameList;

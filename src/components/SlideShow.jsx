@@ -1,5 +1,4 @@
 import React from "react";
-import HomePage from '../pages/HomePage'
 import { Link } from "react-router-dom";
 import { Zoom } from "react-slideshow-image";
 import "react-slideshow-image/dist/styles.css";

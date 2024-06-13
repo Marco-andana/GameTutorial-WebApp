@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 const Leaderboard = ({ users }) => {
   return (
@@ -17,6 +18,10 @@ const Leaderboard = ({ users }) => {
       </ul>
     </div>
   )
+}
+
+Leaderboard.propTypes = {
+  users: PropTypes.array,
 }
 
 export default Leaderboard

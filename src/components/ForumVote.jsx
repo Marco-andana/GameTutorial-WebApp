@@ -5,6 +5,7 @@ import {
     FaThumbsDown,
     FaRegThumbsDown,
   } from 'react-icons/fa';
+  import PropTypes from 'prop-types';
 
 const ForumVote = ({
     id,
@@ -74,5 +75,17 @@ const ForumVote = ({
   </div>
 );
 }
+
+ForumVote.propTypes = {
+    id: PropTypes.string,
+    authUser: PropTypes.string,
+    upVote: PropTypes.func,
+    downVote: PropTypes.func,
+    neutralizeVote: PropTypes.func,
+    upVotesBy: PropTypes.array,
+    downVotesBy: PropTypes.array,
+  };
+  
+  export default ForumVote;
 
 export default ForumVote

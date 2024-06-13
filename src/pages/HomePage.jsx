@@ -10,6 +10,7 @@ import {
   slideInFromRight,
   slideInFromTop,
 } from "../utils/motion";
+import propTypes from 'prop-types';
 
 const HomePage = ({ authUser }) => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -44,5 +45,9 @@ const HomePage = ({ authUser }) => {
     </div>
   );
 };
+
+HomePage.propTypes = {
+  authUser: propTypes.object,
+}
 
 export default HomePage;

@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import VideoItem from './VideoItem';
 import { MdOutlineKeyboardArrowLeft, MdOutlineKeyboardArrowRight } from "react-icons/md";
+import PropTypes from 'prop-types';
 
 const VideoList = ({ videos }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -48,4 +49,9 @@ const VideoList = ({ videos }) => {
     </div>
   )
 }
+
+VideoList.propTypes = {
+  videos: PropTypes.array,
+}
+
 export default VideoList

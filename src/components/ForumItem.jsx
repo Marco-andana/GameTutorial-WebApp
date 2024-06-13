@@ -4,6 +4,7 @@ import { BsChatLeftDots } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { postedAt } from '../utils';
 import ForumVote from './ForumVote';
+import PropTypes from 'prop-types';
 
 const ForumItem = ({
   id, 
@@ -74,6 +75,22 @@ const ForumItem = ({
       </footer>
     </div>
     );
+};
+
+ForumItem.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  body: PropTypes.string,
+  category: PropTypes.string,
+  createdAt: PropTypes.number,
+  upVotesBy: PropTypes.array,
+  downVotesBy: PropTypes.array,
+  totalComments: PropTypes.number,
+  upVote: PropTypes.func,
+  downVote: PropTypes.func,
+  neutralizeVote: PropTypes.func,
+  user: PropTypes.object,
+  authUser: PropTypes.object,
 };
 
 export default ForumItem;

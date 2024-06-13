@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom';
 import { GiSandsOfTime } from "react-icons/gi";
 import { MdOutlineOndemandVideo } from "react-icons/md";
+import PropTypes from 'prop-types';
 
 const VideoItemBody = ({id, title, desc, duration, videos, locked}) => {
   const [isSubscribed, setIsSubscribed] = useState(false);
@@ -32,6 +33,15 @@ const VideoItemBody = ({id, title, desc, duration, videos, locked}) => {
       </div>
     </div>
   )
+}
+
+VideoItemBody.propTypes = {
+  id: PropTypes.string,
+  title: PropTypes.string,
+  desc: PropTypes.string,
+  duration: PropTypes.string,
+  videos: PropTypes.array,
+  locked: PropTypes.bool,
 }
 
 export default VideoItemBody
