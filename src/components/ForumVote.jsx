@@ -87,5 +87,3 @@ ForumVote.propTypes = {
   };
   
   export default ForumVote;
-
-export default ForumVote
