@@ -8,10 +8,12 @@ import lolBanner from '../assets/game-banner/lol-banner.jpg';
 import tekken8Banner from '../assets/game-banner/tekken8-banner.jpg';
 import streetfighterBanner from '../assets/game-banner/streetfighter-banner.jpg';
 import eafc24Banner from '../assets/game-banner/eafc24-banner.jpg';
+import mlbbVid from '../assets/video-tutorial/mlbb.mp4';
 
 const videoData = [
     {
         img: mlbbBanner,
+        url: mlbbVid,
         title: "Mobile Legends",
         desc: "Tutorial Mobile Legends",
         duration: "4:13",

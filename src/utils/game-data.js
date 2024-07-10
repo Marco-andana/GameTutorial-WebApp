@@ -8,11 +8,16 @@ import tekken8Banner from '../assets/game-banner/tekken8-banner.jpg';
 import streetfighterBanner from '../assets/game-banner/streetfighter-banner.jpg';
 import eafc24Banner from '../assets/game-banner/eafc24-banner.jpg';
 import efootballBanner from '../assets/game-banner/efootball-banner.jpg';
-
+import mlbb from '../assets/trailer-videos/mlbb-trailer.mp4';
+import valorant from '../assets/trailer-videos/valorant-trailer.mp4';
+import hok from '../assets/trailer-videos/hok-trailer.mp4';
+import cs2 from '../assets/trailer-videos/cs2-trailer.mp4';
+import dota2 from '../assets/trailer-videos/dota2-trailer.mp4';
 
 const gameData = [
     {
         url: mlbbBanner,
+        trailer: mlbb,
         title: 'Mobile Legends',
         description: 'Mobile Legends: Bang Bang is a multiplayer online battle arena (MOBA) game designed for mobile phones. The two opposing teams fight to reach and destroy the enemy’s base while defending their own base for control of a path, the three “lanes” known as “top”, “middle” and “bottom”, which connects the bases.',
         releaseDate: 'July 11, 2016',
@@ -25,6 +30,7 @@ const gameData = [
     {
         url: valorantBanner,
         title: 'Valorant',
+        trailer: valorant,
         description: 'Valorant is a free-to-play multiplayer tactical first-person shooter developed and published by Riot Games, for Microsoft Windows. First teased with the codename Project A in October 2019, the game began a closed beta period with limited access on April 7, 2020, followed by official release on June 2, 2020.',
         releaseDate: 'June 2, 2020',
         developer: 'Riot Games',
@@ -36,6 +42,7 @@ const gameData = [
     {
         url: hokBanner,
         title: 'Honor Of Kings',
+        trailer: hok,
         description: 'Honor of Kings is a mobile multiplayer online battle arena game developed by Timi Studios and published by Tencent Games. The game was first released on November 26, 2015, and has since become one of the world’s largest and most popular MOBA games.',
         releaseDate: 'November 26, 2015',
         developer: 'TiMi Studios',
@@ -47,6 +54,7 @@ const gameData = [
     {
         url: cs2Banner,
         title: 'Counter Strike 2',
+        trailer: cs2,
         description: 'For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.',
         releaseDate: '22 August 2012',
         developer: 'Valve Corporation',
@@ -58,6 +66,7 @@ const gameData = [
     {
         url: dota2Banner,
         title: 'Dota 2',
+        trailer: dota2,
         description: 'Dota 2 is a multiplayer online battle arena (MOBA) video game developed and published by Valve. The game is a sequel to Defense of the Ancients (DotA), which was a community-created mod for Blizzard Entertainment’s Warcraft III: Reign of Chaos and its expansion pack, The Frozen Throne.',
         releaseDate: 'July 9, 2013',
         developer: 'Valve Corporation',
