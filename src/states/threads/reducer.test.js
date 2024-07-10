@@ -26,13 +26,13 @@ describe('threadsReducers function', () => {
     expect(nextState).toEqual(initialState);
   });
 
-  it('should return the threads when given by RECEIVE_THREADS action', () => {
+  it('should return the threads when given by RECEIVE_TALKS action', () => {
     // arrange
     const initialState = [];
     const action = {
-      type: 'RECEIVE_THREADS',
+      type: 'RECEIVE_TALKS',
       payload: {
-        threads: [
+        talks: [
           {
             id: 'thread-1',
             title: 'Thread Test 1',
@@ -61,10 +61,10 @@ describe('threadsReducers function', () => {
     const nextState = threadsReducer(initialState, action);
 
     // assert
-    expect(nextState).toEqual(action.payload.threads);
+    expect(nextState).toEqual(action.payload.talks);
   });
 
-  it('should return the threads with the new thread when given by CREATE_THREAD action', () => {
+  it('should return the threads with the new thread when given by CREATE_TALK action', () => {
     // arrange
     const initialState = [
       {
@@ -80,7 +80,7 @@ describe('threadsReducers function', () => {
     ];
 
     const action = {
-      type: 'CREATE_THREAD',
+      type: 'CREATE_TALK',
       payload: {
         thread: {
           id: 'thread-2',
@@ -99,10 +99,10 @@ describe('threadsReducers function', () => {
     const nextState = threadsReducer(initialState, action);
 
     // assert
-    expect(nextState).toEqual([action.payload.thread, ...initialState]);
+    expect(nextState).toEqual([action.payload.talk, ...initialState]);
   });
 
-  it('should return the threads with the toggled upVote thread when given by UP_VOTE_THREAD action', () => {
+  it('should return the threads with the toggled upVote thread when given by UP_VOTE_TALK action', () => {
     // arrange
     const initialState = [
       {
@@ -118,9 +118,9 @@ describe('threadsReducers function', () => {
     ];
 
     const action = {
-      type: 'UP_VOTE_THREAD',
+      type: 'UP_VOTE_TALK',
       payload: {
-        threadId: 'thread-1',
+        talkId: 'thread-1',
         userId: 'user-1',
       },
     };
@@ -138,7 +138,7 @@ describe('threadsReducers function', () => {
     ]);
   });
 
-  it('should return the threads with the Up Vote thread when given DOWN_VOTE_THREAD action', () => {
+  it('should return the threads with the Up Vote thread when given DOWN_VOTE_TALK action', () => {
     // arrange
     const initialState = [
       {
@@ -154,9 +154,9 @@ describe('threadsReducers function', () => {
     ];
 
     const action = {
-      type: 'DOWN_VOTE_THREAD',
+      type: 'DOWN_VOTE_TALK',
       payload: {
-        threadId: 'thread-1',
+        talkId: 'thread-1',
         userId: 'user-1',
       },
     };
@@ -174,7 +174,7 @@ describe('threadsReducers function', () => {
     ]);
   });
 
-  it('should return the thread with the neutralize vote thread when given by NEUTRALIZE_VOTE_THREAD', () => {
+  it('should return the thread with the neutralize vote thread when given by NEUTRALIZE_VOTE_TALK', () => {
     // arrange
     const initialState = [
       {
@@ -190,9 +190,9 @@ describe('threadsReducers function', () => {
     ];
 
     const action = {
-      type: 'NEUTRALIZE_VOTE_THREAD',
+      type: 'NEUTRALIZE_VOTE_TALK',
       payload: {
-        threadId: 'thread-1',
+        talkId: 'thread-1',
         userId: 'user-1',
       },
     };

@@ -44,7 +44,7 @@ describe('threadsDetailReducers function', () => {
     const action = {
       type: 'RECEIVE_THREAD_DETAIL',
       payload: {
-        threadDetail: [
+        detailThread: [
           {
             id: 'thread-1',
             title: 'Thread test 1',
@@ -65,7 +65,7 @@ describe('threadsDetailReducers function', () => {
     const nextState = threadDetailReducer(initialState, action);
 
     // assert
-    expect(nextState).toEqual(action.payload.threadDetail);
+    expect(nextState).toEqual(action.payload.detailThread);
   });
 
   it('should return the thread detail with toggled UpVote when given by UP_VOTE_THREAD_DETAIL action', () => {

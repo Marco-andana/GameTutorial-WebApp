@@ -227,7 +227,7 @@ const api = (() => {
     }
   }
 
-  async function upVoteComment({commentId, threadId}) {
+  async function upVoteComment(threadId, commentId) {
     const response = await _fetchWithAuth(`${BASE_URL}/threads/${threadId}/comments/${commentId}/up-vote`, {
       method: 'POST',
       headers: {
@@ -248,7 +248,7 @@ const api = (() => {
     return vote;
   }
 
-  async function downVoteComment({commentId, threadId}) {
+  async function downVoteComment(threadId, commentId) {
     const response = await _fetchWithAuth(`${BASE_URL}/threads/${threadId}/comments/${commentId}/down-vote`, {
       method: 'POST',
       headers: {
@@ -269,7 +269,7 @@ const api = (() => {
     return vote;
   }
 
-  async function neutralizeCommentVote({commentId, threadId}) {
+  async function neutralizeCommentVote(threadId, commentId) {
     const response = await _fetchWithAuth(`${BASE_URL}/threads/${threadId}/comments/${commentId}/neutral-vote`, {
       method: 'POST',
       headers: {

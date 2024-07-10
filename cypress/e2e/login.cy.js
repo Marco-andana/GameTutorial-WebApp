@@ -19,7 +19,7 @@ describe('Login spec', () => {
     cy.get('button').contains(/^Login$/).should('be.visible');
   });
 
-  it('should display alert when username is empty', () => {
+  it('should display alert when email is empty', () => {
     // klik tombol login tanpa mengisi username
     cy.get('button').contains(/^Login$/).click();
 
@@ -31,7 +31,7 @@ describe('Login spec', () => {
 
   it('should display alert when password is empty', () => {
     // mengisi username
-    cy.get('input[placeholder="Email"]').type('testuser');
+    cy.get('input[placeholder="Email"]').type('testuser@gmail.com');
 
     // klik tombol login tanpa mengisi password
     cy.get('button').contains(/^Login$/).click();
@@ -44,7 +44,7 @@ describe('Login spec', () => {
 
   it('should display alert when username and password are wrong', () => {
     // mengisi username
-    cy.get('input[placeholder="Email"]').type('testuser');
+    cy.get('input[placeholder="Email"]').type('testuser@gmail.com');
 
     // mengisi password yang salah
     cy.get('input[placeholder="Password"]').type('wrong_password');

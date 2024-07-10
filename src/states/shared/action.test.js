@@ -10,8 +10,8 @@ import {
   } from 'vitest';
   import { hideLoading, showLoading } from 'react-redux-loading-bar';
   import api from '../../utils/api';
-  import asyncPopulateUserAndThreads from './action';
-  import { receiveThreadsActionCreator } from '../threads/action';
+  import { asyncPopulateUsersAndTalks } from './action';
+  import { receiveTalksActionCreator } from '../threads/action';
   import { receiveUsersActionCreator } from '../users/action';
 
   const fakeThreadsResponse = [
@@ -66,11 +66,11 @@ describe('asyncPopulateUserAndThreads thunk', () => {
     const dispatch = vi.fn();
 
     //action
-    await asyncPopulateUserAndThreads()(dispatch);
+    await asyncPopulateUsersAndTalks()(dispatch);
 
     //assert
     expect(dispatch).toHaveBeenCalledWith(showLoading());
-    expect(dispatch).toHaveBeenCalledWith(receiveThreadsActionCreator(fakeThreadsResponse));
+    expect(dispatch).toHaveBeenCalledWith(receiveTalksActionCreator(fakeThreadsResponse));
     expect(dispatch).toHaveBeenCalledWith(receiveUsersActionCreator(fakeUsersResponse));
     expect(dispatch).toHaveBeenCalledWith(hideLoading());
   });
@@ -85,14 +85,14 @@ describe('asyncPopulateUserAndThreads thunk', () => {
     const dispatch = vi.fn();
 
     //mock alert
-    window.alert = vi.fn();
+    global.alert = vi.fn();
 
     //action
-    await asyncPopulateUserAndThreads()(dispatch);
+    await asyncPopulateUsersAndTalks()(dispatch);
 
     //assert
     expect(dispatch).toHaveBeenCalledWith(showLoading());
     expect(dispatch).toHaveBeenCalledWith(hideLoading());
-    expect(window.alert).toHaveBeenCalledWith(fakeErrorResponse.message);
+    expect(global.alert).toHaveBeenCalledWith(fakeErrorResponse.message);
   });
 });

@@ -1,9 +1,11 @@
 
 import mlbbBanner from '../assets/game-banner/mlbb-banner.jpg';
+import mlbbVid from '../assets/video-tutorial/mlbb.mp4';
 
 const mlbbVideoData = [
     {
         img: mlbbBanner,
+        url: mlbbVid,
         title: "Mobile Legends",
         desc: "Tutorial Mobile Legends",
         duration: "4:13",
